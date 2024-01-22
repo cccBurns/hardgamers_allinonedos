@@ -11022,11 +11022,11 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: #0d6efd;
+    color: #FFF;
     font-weight: bold;
   }
   #mainNav .nav-link:hover {
-    color: #000;
+    color: #0d6efd;
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -11074,7 +11074,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/tecladogamer.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11085,7 +11085,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: #0d6efd;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -11148,7 +11148,7 @@ body {
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/pcgamer.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11197,7 +11197,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 .contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #0d6efd;
 }
 .contact-section .social a:active {
   color: #fff;
@@ -11237,9 +11237,9 @@ body {
 }
 
 .comun {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #0d6efd;
-  font-size: 40px;
+  font-size: 15px;
   line-height: 1; /* Alinea verticalmente */
   padding-top: 10px;
   font-weight: 800;
@@ -11251,4 +11251,26 @@ body {
 .span {
   color: #0d6efd;
   font-weight: bold;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 11px 35px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background: /* linear-gradient(
+      90deg, */
+     /*  #055001 0%, */
+     #0d6efd 100%
+  
+}
+
+.btn-1:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: 1s;
+  color: #141414;
 }
