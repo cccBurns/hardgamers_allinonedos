@@ -68,7 +68,7 @@
                             
                             Bienvenido a <span class="comun">HARD GAMERS!</span>, tu destino para la excelencia en hardware. Somos una empresa líder especializada en procesadores potentes, placas de video de última generación y monitores de alta calidad. Con <span class="comun">HARD GAMERS!</span>, llevamos la experiencia de juego y rendimiento a nuevos niveles. Descubre el poder de la verdadera jugabilidad con nosotros.
                             {% comment %} <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a> {% endcomment %}
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
+                            
                         </p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                                     <h4 class="text-white">Procesadores</h4>
                                     <p class="mb-0 text-white-50">AMD - Intel. <br> Poseemos las principales marcas de procesadores del mercado(AMD - Intel), desde gama baja hasta los procesadores mas potentes.</p>
                                     <br>
-                                    <a href= class="btn-1">Procesadores</a>
+                                    <a href= {% url "procesadores" %} class="btn-1">Procesadores</a>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                     <h4 class="text-white">Placas de video</h4>
                                     <p class="mb-0 text-white-50">Nvidia - AMD. <br> Poseemos las principales marcas de tarjetas graficas del mercado(AMD - Nvidia), desde gama baja hasta las placas mas potentes.</p>
                                     <br>
-                                    <a href= class="btn-1">Placas de video</a>
+                                    <a href= {% url "placas" %} class="btn-1">Placas de video</a>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                                     <h4 class="text-white">Monitores</h4>
                                     <p class="mb-0 text-white-50">La mejor linea. <br> Poseemos un amplio abanico de diferentes marcas y gamas de monitores, como LG, Samgung, Sony, Dell, etc.</p>
                                     <br>
-                                    <a href= class="btn-1">Monitores</a>
+                                    <a href= {% url "monitores" %} class="btn-1">Monitores</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                             <!-- Email address input-->
                             <div class="row input-group-newsletter">
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Email" aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn-1" id="submitButton" type="submit">Notifiquenme!</button></div>
+                                <div class="col-auto"><button class="btn-1" id="submitButton" type="submit">Enviar!</button></div>
                             </div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
