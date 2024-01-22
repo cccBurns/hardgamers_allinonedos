@@ -78,8 +78,10 @@
 
         {% endblock section %}
         <!-- Projects-->
+        {% block section2 %} 
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
+                <h2 class="text-dark text-center mb-4">Nuestros Productos</h2>
                 <!-- Featured Project Row-->
                 {% comment %} <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
@@ -90,7 +92,8 @@
                         </div>
                     </div>
                 </div> {% endcomment %}
-                <!-- Project One Row-->
+                <!-- Project One Row-->                             
+
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/bg-showcase.jpg' %}" alt="..." /></div>
                     <div class="col-lg-6">
@@ -141,6 +144,7 @@
                 
             </div>
         </section>
+        {% endblock section2 %}
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
