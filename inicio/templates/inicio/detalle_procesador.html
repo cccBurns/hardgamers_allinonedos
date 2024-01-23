@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+    <title>Procesador {{procesador.id}}</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+    Procesador {{procesador.id}}
+{% endblock h1_header %}
+
+{% block main %}
+    <div style="text-align: center; margin-top: 20px;">
+        <ul style="list-style: none; padding: 0; width: 300px; margin: auto; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; padding: 20px;">
+            <li style="margin-bottom: 10px;">Marca: {{procesador.marca}}</li>
+            <li style="margin-bottom: 10px;">Modelo: {{procesador.modelo}}</li>
+            <li style="margin-bottom: 10px;">Descripción: {{procesador.descripcion}}</li>
+            <li style="margin-bottom: 10px;">Fecha de creación: {{procesador.fecha_creacion}}</li>
+        </ul>
+    </div>
+{% endblock main %}

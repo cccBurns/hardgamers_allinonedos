@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+    <title>Placas de video</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+
+{% endblock h1_header %}
+
+{% block contiene_header %}
+
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Placas de video</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">De Gamers para Gamers.</h2>
+                <a class="btn-1" href="#about">Ver mas</a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+{% endblock contiene_header %}
+
+{% block section %}
+
+<div id="abajo" style="text-align: center; margin-top: 20px;">
+    <p>
+        <a href={% url "crear_placa" %} class="btn-1">Crear Placa de video</a>
+    </p>
+
+    <form action={% url "placas" %} method="get" style="margin-bottom: 20px;">
+        <input type="text" name="marca" placeholder="Buscar Placa de video..." class="form-control" style="margin-top: 10px;">
+        <input type="submit" value="Buscar" class="btn btn-secondary" style="margin-top: 10px;">
+    </form>
+
+    {% if listado_de_placas %}
+        <ul style="list-style: none; padding: 0;">
+            {% for placa in listado_de_placas %}
+                <li style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ccc;">
+                    <strong>{{ placa }}</strong><br>
+                    <a href={% url "actualizar_placa" placa.id %} class="btn-1">Actualizar</a> 
+                    <a href={% url "eliminar_placa" placa.id %} class="btn-1">Eliminar</a>
+                    <a href={% url "detalle_placa" placa.id %} class="btn-1">Detalle</a> 
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron Placas de video.</p>
+    {% endif %}
+</div>
+
+{% endblock section %}
+
+
+{% block main %}    
+{% endblock main %}
+
+{% block footer %}
+{% endblock footer %}

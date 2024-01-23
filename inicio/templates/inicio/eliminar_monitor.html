@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Eliminar Monitores</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Eliminar Monitores
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Desea eliminar el monitor {{placa.marca}} - {{placa.modelo}} - {{placa.fecha_creacion}}?
+    <input type="submit" value="Confirmar">
+</form>
+
+{% endblock main %}

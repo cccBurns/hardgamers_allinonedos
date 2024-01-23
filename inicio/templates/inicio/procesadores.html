@@ -24,7 +24,7 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Procesadores</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">De Gamers para Gamers.</h2>
-                        <a class="btn-1" href="#about">Ver mas</a>
+                        
                     </div>
                 </div>
             </div>
@@ -33,13 +33,7 @@
 {% endblock contiene_header %}
 
 {% block section %}
-{% endblock section %}
-
-{% block section2 %}
-{% endblock section2 %}
-
-{% block main %}
-    <div id="abajo" style="text-align: center; margin-top: 20px;">
+    <div style="text-align: center; margin-top: 20px;">
         <p>
             <a href={% url "crear_procesador" %} class="btn-1">Crear Procesador</a>
         </p>
@@ -64,40 +58,18 @@
             <p>No se encontraron Procesadores.</p>
         {% endif %}
     </div>
+
+{% endblock section %}
+
+{% block section2 %}
+{% endblock section2 %}
+
+{% block main %}    
 {% endblock main %}
 
+{% block contacto %}
+{% endblock contacto %}
+
+
 {% block footer %}
-<footer class="footer bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                <ul class="list-inline mb-2">
-                    <li class="list-inline-item"><a href="#!"><strong>Inicio</strong></a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!"><strong>About</strong></a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!"><strong>Productos</strong></a></li>
-                    <li class="list-inline-item">⋅</li>
-                    <li class="list-inline-item"><a href="#!"><strong>Contacto</strong></a></li>
-                    <li class="list-inline-item">⋅</li>
-                    
-                </ul>
-                <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
-            </div>
-            <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                    </li>
-                    <li class="list-inline-item me-4">
-                        <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
 {% endblock footer %}

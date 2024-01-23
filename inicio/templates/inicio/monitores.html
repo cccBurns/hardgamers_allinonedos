@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+    <title>Placas de video</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+
+{% endblock h1_header %}
+
+{% block contiene_header %}
+
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Monitores</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">De Gamers para Gamers.</h2>
+                <a class="btn-1" href="#about">Ver mas</a>
+            </div>
+        </div>
+    </div>
+</header>
+        
+{% endblock contiene_header %}
+
+{% block section %}
+
+<div id="abajo" style="text-align: center; margin-top: 20px;">
+    <p>
+        <a href={% url "crear_monitor" %}>Crear Monitor</a>
+    </p>
+
+    <form action="" method="get" style="margin-bottom: 20px;">
+        {{ formulario }}
+        <input type="submit" value="Buscar Monitor" class="btn-1" style="margin-top: 10px;">
+    </form>
+
+    {% if listado_de_monitores %}
+        <ul style="list-style: none; padding: 0;">
+            {% for monitor in listado_de_monitores %}
+                <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc;">
+                    <strong>{{ monitor }}</strong><br>
+                    {% if monitor.foto %}
+                    <img src="{{ monitor.foto.url }}" alt="{{ monitor.marca }}" style="max-width: 200px; max-height: 200px;">
+                    {% endif %}
+                    <a href={% url "actualizar_monitor" monitor.id %}>Actualizar</a> 
+                    <a href={% url "eliminar_monitor" monitor.id %}>Eliminar</a> 
+                    <a href={% url "detalle_monitor" monitor.id %}>Detalle</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron monitores.</p>
+    {% endif %}
+    
+</div>
+
+{% endblock section %}
+
+
+{% block main %}    
+{% endblock main %}
+
+{% block footer %}
+{% endblock footer %}

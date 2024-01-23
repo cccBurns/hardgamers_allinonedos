@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+    <title>Crear Procesador</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+    <h1 style="text-align: center; margin-top: 20px;">
+        Crear Procesador
+    </h1>
+{% endblock h1_header %}
+
+{% block main %}
+    <div style="max-width: 400px; margin: auto; margin-top: 50px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            <div style="margin-bottom: 15px; display: flex; flex-direction: column;">
+                <label for="{{ form.marca.id_for_label }}" style="font-size: 16px;">Marca:</label>
+                {{ form.marca }}
+            </div>
+            <div style="margin-bottom: 15px; display: flex; flex-direction: column;">
+                <label for="{{ form.modelo.id_for_label }}" style="font-size: 16px;">Modelo:</label>
+                {{ form.modelo }}
+            </div>
+            <div style="margin-bottom: 15px; display: flex; flex-direction: column;">
+                <label for="{{ form.descripcion.id_for_label }}" style="font-size: 16px;">Descripción:</label>
+                {{ form.descripcion }}
+            </div>
+            <div style="margin-bottom: 15px; display: flex; flex-direction: column;">
+                <label for="{{ form.fecha_creacion.id_for_label }}" style="font-size: 16px;">Fecha de Creación:</label>
+                {{ form.fecha_creacion }}
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px; border-radius: 5px; cursor: pointer; font-size: 16px; background-color: #01fc4c;">Crear Procesador</button>
+        </form>
+    </div>
+{% endblock main %}

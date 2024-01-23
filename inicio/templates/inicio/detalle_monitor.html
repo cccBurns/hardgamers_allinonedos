@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+    <title>Monitor {{monitor.id}}</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+    Monitor {{monitor.id}}
+{% endblock h1_header %}
+
+{% block section %}
+    <div style="text-align: center; margin-top: 20px;">
+        <ul style="list-style: none; padding: 0; width: 300px; margin: auto; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; padding: 20px;">
+            <li style="margin-bottom: 10px;">Marca: {{monitor.marca}}</li>
+            <li style="margin-bottom: 10px;">Descripción: {{monitor.descripcion | safe }}</li>
+            <li style="margin-bottom: 10px;">Año: {{monitor.anio}}</li>
+            {% if monitor.imagen %}
+            <img src="{{ monitor.imagen.url }}" alt="{{ monitor.marca }} - Imagen">
+            {% else %}
+            <p>No hay imagen disponible.</p>
+            <p>Debug: {{ monitor.imagen }}</p>
+            {% endif %}
+        </ul>        
+    </div>
+{% endblock section %}

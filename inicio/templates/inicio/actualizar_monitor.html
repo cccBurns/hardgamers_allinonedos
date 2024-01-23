@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Actualizar Monitor</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Actualizar Monitor
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="{% if monitor.id %}{% url 'actualizar_monitor' monitor.id %}{% endif %}" method="POST">
+    {% csrf_token %}
+    <table>
+        {{formulario.media}}
+        {{formulario}}
+    </table>
+    <input type="submit" value="Actualizar">
+</form>
+
+{% endblock main %}

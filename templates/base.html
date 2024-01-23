@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">HARD GAMERS!</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}">HARD GAMERS!</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -64,11 +64,9 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">Quienes somos</h2>
-                        <p class="text-white-50">
-                            
+                        <p class="text-white-50">                            
                             Bienvenido a <span class="comun">HARD GAMERS!</span>, tu destino para la excelencia en hardware. Somos una empresa líder especializada en procesadores potentes, placas de video de última generación y monitores de alta calidad. Con <span class="comun">HARD GAMERS!</span>, llevamos la experiencia de juego y rendimiento a nuevos niveles. Descubre el poder de la verdadera jugabilidad con nosotros.
-                            {% comment %} <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a> {% endcomment %}
-                            
+                            {% comment %} <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a> {% endcomment %}                            
                         </p>
                     </div>
                 </div>
@@ -145,6 +143,8 @@
             </div>
         </section>
         {% endblock section2 %}
+
+        {% block contacto %}
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
@@ -189,6 +189,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
@@ -209,7 +210,7 @@
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                <div class="small text-black-50"><a href="#!">christianburns03@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
@@ -231,8 +232,12 @@
                 </div>
             </div>
         </section>
+        {% endblock contacto %}
+
+        {% block footer %}        
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; <span class="comun">HARD GAMERS!</span> 2024</div></footer>
+        {% endblock footer %}
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
