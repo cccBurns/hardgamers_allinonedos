@@ -5,12 +5,12 @@
 {% endblock title_head %}
 
 {% block h1_header %}
-    <h1 style="text-align: center; margin-top: 20px;">
+    {% comment %} <h1 style="text-align: center; margin-top: 20px;">
         Crear Procesador
-    </h1>
+    </h1> {% endcomment %}
 {% endblock h1_header %}
 
-{% block main %}
+{% block contiene_header %}
     <div style="max-width: 400px; margin: auto; margin-top: 50px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <form action="" method="POST">
             {% csrf_token %}
@@ -34,4 +34,4 @@
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px; border-radius: 5px; cursor: pointer; font-size: 16px; background-color: #01fc4c;">Crear Procesador</button>
         </form>
     </div>
-{% endblock main %}
+{% endblock contiene_header %}
