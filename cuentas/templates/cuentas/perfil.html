@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block tittle_head %} 
+<title>Perfil</title>
+{% endblock tittle_head %}
+
+{% block contiene_header %}
+        <header class="about">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 class="comun" style="font-size: 50px">Perfil</h1>
+                            <br>
+                            <p>Tus datos en <span class="span">HARD GAMERS!</span>.</p>
+                            <br>
+                            
+                            {% if request.user.datosextra.avatar %}
+                            <div><img src="{{request.user.datosextra.avatar.url}}" alt="Foto de Perfil" height='200px'></div>
+                            {% endif %}
+                            <h1>Bienvenido {{request.user.username}}</h1>
+                            <br>
+
+                            <li>
+                                {{request.user.first_name}}
+                            </li>    
+                            <li>
+                                {{request.user.last_name}}
+                            </li>
+                            <li>
+                              {{request.user.email}}
+                          </li>
+                            <li>
+                                {{biografia | safe}}
+                            </li> 
+                            <br>
+                            <a class="btn-1" href="{% url "editar_perfil" %}">Editar Perfil</a>
+                            
+                            <br>
+                                                        
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <!-- Email address input-->
+                                {% comment %} <div class="row">
+                                    <div class="col">
+                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    </div>
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                </div> {% endcomment %}
+                                <!-- Submit success message-->
+                                <!---->
+                                <!-- This is what your users will see when the form-->
+                                <!-- has successfully submitted-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        <p>To activate this form, sign up at</p>
+                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <!---->
+                                <!-- This is what your users will see when there is-->
+                                <!-- an error submitting the form-->
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+{% endblock contiene_header %}
+
+{% block h1_header %}
+
+{% endblock h1_header %}
+
+
+{% block section %}
+
+{% endblock section %}
+
+{% block main %}
+
+{% endblock main %}
+
+
+
+{% block footer %}
+<footer class="footer bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                <ul class="list-inline mb-2">
+                    <li class="list-inline-item"><a href="{% url 'inicio' %}"><strong>Inicio</strong></a></li>
+                    <li class="list-inline-item">⋅</li>
+                    <li class="list-inline-item"><a href="{% url 'about' %}"><strong>About</strong></a></li>
+                    <li class="list-inline-item">⋅</li>
+                    <li class="list-inline-item"><a href="{% url 'productos' %}"><strong>Productos</strong></a></li>
+                    <li class="list-inline-item">⋅</li>
+                    <li class="list-inline-item"><a href="{% url 'contacto' %}"><strong>Contacto</strong></a></li>
+                    <li class="list-inline-item">⋅</li>                    
+                </ul>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; <span class="span">HARD GAMERS!</span> 2024. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item me-4">
+                        <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                    </li>
+                    <li class="list-inline-item me-4">
+                        <a href="#!"><i class="bi-twitter fs-3"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#!"><i class="bi-instagram fs-3"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}

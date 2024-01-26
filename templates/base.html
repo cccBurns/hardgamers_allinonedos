@@ -32,6 +32,26 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contacto</a></li>
+    
+                        {% if not request.user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'registrarse' %}">Registrarse</a></li>
+                        {% else %}
+                            <li class="nav-item">
+                                <div class="navbar-text d-flex align-items-center" style="margin-top: 20px; color: #00db42; font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-weight: bold;">
+                                    {% if request.user.datosextra.avatar %}
+                                        <img src="{{ request.user.datosextra.avatar.url }}" alt="" height='40px' style="margin-right: 10px;">
+                                    {% endif %}
+                                    <span>{{ request.user.username }}</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <form method="post" action="{% url 'logout' %}" class="form-inline" style="font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-weight: bold;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-link nav-link">Cerrar Sesión</button>
+                                </form>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
